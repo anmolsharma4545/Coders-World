@@ -78,12 +78,17 @@ list-style: none;
 
 
 .menu .user{
-	color: #4d4d4d;
+	color: cyan;
 	font-size: 18px;
+	border:1px solid cyan;
 	padding: 10px 20px;
-	border-radius: 4px;
+	border-radius: 8px;
 }
-
+.toggleicon i{
+	color: #fff;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
 
 
 .text{
@@ -135,6 +140,8 @@ font-size: 20px;
 
 .sub-menu{
 	display: none;
+	transition: 0.5s;
+	
 }
 .menu ul li:hover .sub-menu{
 display: block;
@@ -160,20 +167,7 @@ width: 250px;
 	border-bottom: none;
 }
 
-.burger div{
-	width: 25px;
-	height: 3px;
-	background-color:rgb(226,226,226);
-	margin: 5px; 
-}
-
-.burger{
-	display: none;
-	margin-left: 20px;
-	margin-top: 20px;
-}
-
-#toggle{
+.toggleicon i{
 	display: none;
 }
 
@@ -183,7 +177,7 @@ width: 250px;
 		padding: 0;
 	}
 	body{
-		
+	width:100%;	
 	}
 	.logo img{
 		width: 50%;
@@ -191,22 +185,44 @@ width: 250px;
 	.menu{
 		display: flex;
 		margin: 0 auto;
-		margin-top: 16px;
+		margin-top: 20px;
 		padding: 10px 10px;
 	}
-	.menu ul li{
-		display: none;
-	}
 	
-	.burger{
-		margin: 0;
-		padding: 0;
+	
+	.toggleicon i{
 		display: block;
-		cursor: pointer;
+	}
+	.nav ul{
+		width:100%;
+		display: inline-block;
+		background: #bc5d2e;
+		position: absolute;
+		top: 70px;
+		overflow: hidden;
+		right: 0;
+		z-index: 2;
+	}
+	.nav ul li{
+		text-align: center;
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#menulist{
+		overflow: hidden;
+		transition: 0.5s;
 	}
 	
 	.nav{
 		display: flex;
+		
+	}
+	.sub-menu{
+		position: absolute;
+		right: 55%;
+		bottom: 70%;
+		transition: 0.4s;
 	}
 	.header{
 	top: 45%;

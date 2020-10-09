@@ -7,8 +7,7 @@
 	<title>Coder`s World</title>
 	<link rel="icon" type="image/png" href="img/logo.png">
 	<link rel="stylesheet" type="text/css" href="index.css">
-	<link rel="stylesheet" href="file:///D:/My%20Project/fontawesome-free-5.14.0-web/js/all.min.js">
-	<link rel="stylesheet" type="text/css" href="file:///D:/My%20Project/fontawesome-free-5.14.0-web/css/all.css">
+	<script src="https://kit.fontawesome.com/197283b8d5.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	
@@ -21,7 +20,7 @@
 		</div>
 		
 		<div class="menu">
-			<ul>
+			<ul id="menulist">
 				<li><a href="index.htm" class="link">Home</a></li>
 				<li><a href="#" class="link" target="_blank">Links</a></li>
 				<li><a href="D:\My Project\Coder`s World\Contact Us\contact.htm" class="link">Contact </a></li>
@@ -35,15 +34,12 @@
 			</li>
 				<li><a href="D:\My Project\Coder`s World\Login\login.htm" target="_blank" class="user">Login</a></li>
 				<li><a href="\My Project\Coder`s World\Register\Register.htm" target="_blank" class="user">Register</a></li>
+			
 			</ul>
-			<input type="checkbox" id="toggle">
-			<label for="toggle"
-			<div class="burger">
-				<div class="line1"></div>
-				<div class="line1"></div>
-				<div class="line1"></div>
+			<div class="toggleicon">
+			<i class="fas fa-bars" onclick="togglemenu()"></i>
 			</div>
-		</label>
+		
 		</div>
 	</div>
 	<div class="text">
@@ -65,5 +61,19 @@
 
 
 </div>
+<script>
+	var menulist = document.getElementById('menulist');
+
+	menulist.style.maxHeight = "0px";
+	function togglemenu(){
+		if (menulist.style.maxHeight == "0px") {
+			menulist.style.maxHeight = "370px";
+		}
+		else
+		{
+			menulist.style.maxHeight = "0px";
+		}
+	}
+</script>
 </body>
 </html>
