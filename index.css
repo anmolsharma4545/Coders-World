@@ -104,6 +104,12 @@ list-style: none;
 	text-align: center;
 
 }
+.header-img img{
+		width:300px;
+		height: 300px;
+		margin-top: 70px;
+		margin-left: 100px;
+	}
 
 .header h1{
 	color: #fff;
@@ -231,6 +237,12 @@ width: 250px;
 	 transform: translate(-50% -50%);
 	text-align: center;
 	}
+	.header-img img{
+		width:300px;
+		height: 300px;
+		margin-top: 300px;
+		margin-left: 160px;
+	}
 
 	.header h1
 	{
@@ -238,10 +250,12 @@ width: 250px;
 		font-size: 28px;
 		width: 250px;
 		margin-right: 60px;
+		color: cyan;
 
 	}
 	.header p{
 		font-size: 18px;
+		color: red;
 	}
 }
 
