@@ -6,37 +6,42 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/197283b8d5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<br/> <br/> <br/> <br/>
-	<center>
-		<h1>Get Started</h1>
-		<div class="start">
-			<form name="login">
-		
-				<img src="img/website.jpg" class="img"/> 
-		       <input type="text" name="userid" class="txtbox" placeholder="Enter E-mail ID" /><br/><br/>
-		       <input type="password" name="pswrd" class="txtbox" placeholder="Enter your Password" /><br /><br/>
-		       <input type="button" onclick="check(this.form)" value="Login" class="btn"><br/>
-		       <input type="reset" class="btn"><br><hr>
-		       <a href="#">Forgot Password</a><br/><hr>
-		       <a href="D:\My Project\Coder`s World\Register\register.htm">Don't have an account</a>
+	<div class="container">
+		<h2>Login</h2>
+		<form >
+			<img src="../img/undraw_Personal_email_re_4lx7.svg" alt="">
+			<input type="email" name="email"  placeholder="Enter your Email">
+			<input type="password" name="password" placeholder="Enter your Password">
+			<button>Login</button>
+			<p class="social-text">Or Login with Social Platforms</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+		</form>
 
-			</form>
-		</div>
-	</center>
-	<script language="javascript">
-		function check(form) {
+
+	</div>
 
 
-	if(form.userid.value=="anmol123"&& form.pswrd.value=="ilikeit") {
-		alert("Login Success!!!!")
-		window.open('mainpage.htm')
-	}
-	else {
-		alert("Invalid Username or Password----")
-	}
-}
+	<script>
+
+window.addEventListener('load',  () =>{
+	document.querySelector('.container').style.transform = "translateY(0%)";
+});
 	</script>
 </div>
 </body>

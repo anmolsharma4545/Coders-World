@@ -1,83 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=0.5">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Coder`s World</title>
-	<link rel="icon" type="image/png" href="img/logo.png">
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<script src="https://kit.fontawesome.com/197283b8d5.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <!-- Including AOS  -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+  <!-- Font Awesome-->
+  <script src="https://kit.fontawesome.com/197283b8d5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- External CSS -->
+      <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- jQuery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+   <!--Magnific Popup CDN-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.2/jquery.magnific-popup.min.js" integrity="sha512-TbDl7iejPr9upDXgcgz667kUcpmRClzQMBYD9BitGFJej9HYWLpJW9xI54Wv0HYdHLZlaGXKyFWEK64YxK8G6Q==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.2/magnific-popup.min.css" integrity="sha512-8v/fEL/9p+HZWAOfUNTfd/6dgzyVQ/1cRCxEGDhTNhdQY6Kp0ZmokB1X+1h2riVmxY5gP5Eq74FTD9nwEHvn4A==" crossorigin="anonymous" />
+    <!--Gsap CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous"></script>
+    <!--SweetAlert CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link> 
 </head>
 <body>
-	
-<div class="wrapper">
-	
-	<div class="nav">
-		
-		<div class="logo">
-			<img src="img/logo.png">
-		</div>
-		
-		<div class="menu">
-			<ul id="menulist">
-				<li><a href="index.htm" class="link">Home</a></li>
-				<li><a href="#" class="link" target="_blank">Links</a></li>
-				<li><a href=".\Contact Us\contact.htm" class="link">Contact </a></li>
-				<li><a href="#" class="dropdown" >Courses</a>
-				<div class="sub-menu">
-					<ul>
-						<li><a href="webdev.htm">Web Dev</a></li>
-						<li><a href="softdev.htm">Soft Dev</a></li>
-					</ul>
-				</div>
-			</li>
-				<li><a href=".\Login\login.htm" target="_blank" class="user">Login</a></li>
-				<li><a href=".\Register\Register.htm" target="_blank" class="user">Register</a></li>
-			
-			</ul>
-			<div class="toggleicon">
-			<i class="fas fa-bars" onclick="togglemenu()"></i>
-			</div>
-		
-		</div>
-	</div>
-	<div class="text">
-		<marquee >
-			<p>
-				<i style="font-size: 35px;">T</i><i>his Platform is designed for Nerds who are in search of the incredible Knowledge to enhance and beautify their skills and career....</i>
-			</p>
-		
-		</marquee>
-	</div>
-	<div class="header-img">
-	<img src="laptop.svg">
-	</div>
-	<div class="header">
-		
-		<h1>World Of Geeks</h1>
-		<p>
-			Make it Possible..
-		</p>
-	
-	</div>           
-</div>
+	<div class="container">
+    <div class="loader">
+      <img src="./img/828.gif" alt="">
+    </div> 
+      <header>
+          <a href="#" class="logo" id="text"></a>
+          <div class="menu-toggle"></div>
+          <nav>  
+            <ul>
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="./Login/login.htm">Login</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="clearfix"></div>
+        </header>
+        <section class="section">
+          <div class="left-panel">
+            <img src="https://cutewallpaper.org/21/website-background-wallpaper/Download-Website-Background-Images-Hd-,-High-quality-.jpg" alt="" class="img">
+          <div class="join-us">
+                <h2>Join Us</h2>
+                <p id="text2"></p>
+                <div class="get-started">
+                    <a href="./Register/Register.htm" target="_blank"><span>Get Started</span></a>
+                </div>
+            </div>
+        </div>
+        </section>
+        <div class="slider"></div>
+       <section id="about">
+    <div class="about-section">
+                <h2>About Us</h2>
+                <div class="txt" data-aos="fade-up">
+                    <img src="https://i.pinimg.com/originals/00/c5/37/00c537bdf08547f031540521892e5aa7.gif" alt="">
+                    <p>We are Coder`s World,<br>A leading tech company who provides educational content over internet.
+                        <br>Here you can register yourself and Boom!!! . It is very easy to learn it all..<br>
+                        We have database functionality which gives you access to your records and data. 
+                        You can Add/Modify/Delete Records..</p>
+                </div>
+                <div class="vision" data-aos="fade-up">
+                    <h2>Our Vision</h2>
+                    <p>"We believe that we are on the face of the earth to make great products and that's not changing.
+                         We are constantly focusing on innovating. We believe in the simple not the complex. 
+                         We believe that we need to own and control the primary technologies behind the products that we make, 
+                         and participate only in markets where we can make a significant contribution. 
+                         We believe in saying no to thousands of projects, 
+                         so that we can really focus on the few that are truly important and meaningful to us.
+                          We believe in deep collaboration and cross-pollination of our groups, 
+                          which allow us to innovate in a way that others cannot.
+                           And frankly, we don't settle for anything less than excellence in every group in the company,
+                            and we have the self-honesty to admit when we're wrong and the courage to change.
+                             And I think regardless of who is in what job those values are so embedded in this company that we will do extremely well."</p>
+                </div>
+                <div class="vision" data-aos="fade-up">
+                    <h2>Why Choose Us</h2>
+                    <p>It’s our attention to the small stuff, scheduling of timelines and keen project management that makes us stand out from the rest. 
+                        We are creative, while keeping a close eye on the calendar and your budget.
+                        We are dedicated to provide you with the best data services across the globe,which enhances your overall performance..
+                        For us, it’s all about what adds value for you and your business. Above all, we want our words to work for you.</p>
+                </div>
+            </div>
+        </section>
+        <section id="gallery">
+            <div class="gallery-section" data-aos = "fade-up">
+                <div class="inner-width">
+                  <h1>Image-Gallery</h1>
+                  <div class="border"></div>
+                  <div class="gallery">
+          
+                    <a href="img/12.png" class="image">
+                      <img src="img/12.png" alt="">
+                    </a>
+          
+                    <a href="img/11.png" class="image">
+                      <img src="img/11.png" alt="">
+                    </a>
+          
+                    <a href="img/10.jpg" class="image">
+                      <img src="img/10.jpg" alt="">
+                    </a>
+          
+                    <a href="img/9.png" class="image">
+                      <img src="img/9.png" alt="">
+                    </a>
+          
+                    <a href="img/8.png" class="image">
+                      <img src="img/8.png" alt="">
+                    </a>
+          
+                    <a href="img/7.png" class="image">
+                      <img src="img/7.png" alt="">
+                    </a>
+          
+                    <a href="img/6.png" class="image">
+                      <img src="img/6.png" alt="">
+                    </a>
+          
+                    <a href="img/5.png" class="image">
+                      <img src="img/5.png" alt="">
+                    </a>
+          
+                    <a href="img/4.png" class="image">
+                      <img src="img/4.png" alt="">
+                    </a>
+          
+                    <a href="img/3.png" class="image">
+                      <img src="img/3.png" alt="">
+                    </a>
+          
+                    <a href="img/2.png" class="image">
+                      <img src="img/2.png" alt="">
+                    </a>
+          
+                    <a href="img/1.png" class="image">
+                      <img src="img/1.png" alt="">
+                    </a>
+          
+                  </div>
+                </div>
+              </div>
+              
+        </section>
 
+        <section id="contact">
+            <div class="contain" data-aos="fade-up">
+                
+                    <h2>Get in Touch</h2>
+                    <p>Enter your Email and We will connect to you soon.</p>
+                
+                <form  class="ctan">
+                    <div class="contact">
+                        <input type="email"  placeholder="Your Email Address" />
+                        <button style="width: 200px;" id="register_btn">Register</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-</div>
-<script>
-	var menulist = document.getElementById('menulist');
-
-	menulist.style.maxHeight = "0px";
-	function togglemenu(){
-		if (menulist.style.maxHeight == "0px") {
-			menulist.style.maxHeight = "370px";
-		}
-		else
-		{
-			menulist.style.maxHeight = "0px";
-		}
-	}
-</script>
+        <footer id="footer" data-aos="fade-up">
+            <ul class="icons" data-aos="fade-up">
+                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100004785785087" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://www.instagram.com/an_mol_sha_rma/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/anmolsharma4545" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="mailto:anmol.sharma4545@gmail.com" class="icon solid alt fa-envelope" ><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Coder`s World. &reg; All rights reserved.</li><li>Design: <a href="#">Anmol Sharma</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="./js/gsapanim.js"></script>
+    <script src="./js/preloader.js"></script>
+    <script>
+    $(".gallery").magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    gallery:{
+      enabled: true
+    }
+  });
+    </script>
 </body>
 </html>
