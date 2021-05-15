@@ -652,7 +652,8 @@ input::placeholder{
          display: block;
          width: 40px;
          height: 40px;
-         margin-left: 570px;
+         float: right;
+         margin-right: 30px;
          padding-top: 10px;
          cursor: pointer;
          text-align: center;
