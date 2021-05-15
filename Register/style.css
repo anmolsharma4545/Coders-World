@@ -13,6 +13,7 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	
 }
 
 
@@ -43,6 +44,8 @@ body{
 form{
 	display: flex;
 	flex-direction: column;
+	transform: translateZ(-2000px);
+	transition: all 2s ease;
 }
 form img{
 	width: 300px;
