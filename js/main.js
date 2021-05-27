@@ -2,6 +2,7 @@ const menu = document.querySelector('.menu-toggle');
 const darkMode = document.querySelector('.darkmode');
 const nav = document.querySelector('nav');
 const registerBtn = document.querySelector('#register_btn');
+const subMenu = document.querySelector('.sub-menu');
 menu.addEventListener('click', () =>{
     menu.classList.toggle('active')
     nav.classList.toggle('active')
@@ -70,6 +71,6 @@ typing();
     // start animation
     playAnim();
    
-        
+  
 
    

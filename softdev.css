@@ -1,746 +1,82 @@
 *{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
-body{
-	background: #09161d;
+.container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	min-height: 100vh;
+	background: url(./img/10.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	font-family: Poppins, sans-serif;
 	
 }
-
-.links{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-left: 20px;
+.wrapper{
+	display: grid;
+	grid-template-columns:  repeat(2 ,1fr);
+	grid-gap: 30px;
 }
 
-
-
-
-.heading{
+.wrapper .link{
+	width: 250px;
+	height: 300px;
+	border-radius: 15px;
+	transition:  transform 500ms ease-out;
+	overflow: hidden;
 	color: #fff;
-	position: relative;
-	font-size: 30px;
-	justify-content: center;
-	align-items: center;
+	padding: 5%;
 	text-align: center;
+	background: rgba(252, 250, 250, 0.2);
+	backdrop-filter: blur(30px);
+	border: 2px solid rgba(252, 250, 250, 0.1);
+}
+.link img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+.link h3{
+	font-size: 32px;
 	font-weight: lighter;
-	border:1px solid #fff;
-	text-shadow: 5px 2px 6px white;
-
-
+	margin-bottom: 30px;
+	color: rgba(255,255,255,0.7);
 }
-
-.cplus{
-	position: relative;
-	width: 220px;
-	height: 250px;
-	margin-top: 100px;
-	margin-left: 40px;
-	padding-top: 15px;
-	background: #122936;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.cplus::before 
-{
-	content: '';
-	position: absolute;
-	background: #2196f3;
-	top: -50%;
-	width: 100%;
-	height: 100%;
-	transform: skewY(345deg);
-	transition: 0.5s;
-}
-
-
-.cplus:hover::before
-{
-	top: -70%;
-	transform: skewY(390deg);
-}
-
-.imgbox img
-{
-	height: 100px;
-	width: 150px;
-	border-radius: 8px;
-}
-
-.cplus .imgbox
-{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.cplus:hover .imgbox img
-{
-	max-width: 50%;
-}
-
-.cplus .contentbx
-{
-	position: relative;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 1;
-
-}
-
-
-.cplus .contentbx h3
-{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.cplus .contentbx .learn
-{
-	position: relative;
-	top: 200px;
-	opacity: 0;
-	padding: 10px 30px;
-	margin-top: 15px;
-	color: #fff;
+.link a{
+	border: none;
+	background: #fff;
+	padding: 15px 50px;
+	display: inline-block;
+	margin-top: 10px;
 	text-decoration: none;
-	background: #2196f3;
-	border-radius: 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: 0.5s;
+	font-size: 16px;
+	border-radius: 50px;
 }
-
-.cplus:hover .contentbx .learn
-{
-	top: 15px;
-	opacity: 1;
-}
-
-
-.c
-{
-	position: relative;
-	width: 220px;
-	height: 250px;
-	margin-top: 100px;
-	margin-left: 40px;
-	padding-top: 15px;
-	background: #122936;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.c::before
-{
-	content: '';
-	position: absolute;
-	background: #ffcccc;
-	top: -50%;
-	width: 100%;
+.wrapper .link:before{
+	content: ' ';
+	background: rgba(252, 250, 250, 0.3);
+	width: 60%;
 	height: 100%;
-	transform: skewY(345deg);
-	transition: 0.5s;
-}
-
-.c:hover::before{
-	top: -70%;
-	transform: skewY(390deg);
-}
-
-.imgbox1 img{
-	height: 100px;
-	width: 150px;
-	border-radius: 8px;
-}
-
-.c .imgbox1{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.c:hover .imgbox1 img{
-	max-width: 50%;
-}
-
-.c .contentbx1{
-	position: relative;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 1;
-
-}
-
-
-.c .contentbx1 h3{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.c .contentbx1 .learn{
-	position: relative;
-	top: 200px;
-	opacity: 0;
-	padding: 10px 30px;
-	margin-top: 15px;
-	color: #fff;
-	text-decoration: none;
-	background: #2196f3;
-	border-radius: 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: 0.5s;
-}
-
-.c:hover .contentbx1 .learn{
-	top: 15px;
-	opacity: 1;
-}
-
-
-
-
-.java{
-	position: relative;
-	width: 220px;
-	height: 250px;
-	margin-top: 100px;
-	margin-left: 40px;
-	padding-top: 15px;
-	background: #122936;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.java::before{
-	content: '';
+	top: 0%;
+	left: -125%;
+	transform: skew(45deg);
 	position: absolute;
-	background: #ff33cc;
-	top: -50%;
-	width: 100%;
-	height: 100%;
-	transform: skewY(345deg);
-	transition: 0.5s;
+	animation-direction: left;
+	transition-duration: 500ms;
+}
+.wrapper .link:hover{
+	transform: translateY(-5%);
+}
+.wrapper .link:hover:before{
+	left: 150%;
 }
 
-.java:hover::before{
-	top: -70%;
-	transform: skewY(390deg);
-}
-
-.imgbox2 img{
-	height: 100px;
-	width: 150px;
-	border-radius: 8px;
-}
-
-.java .imgbox2{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.java:hover .imgbox2 img{
-	max-width: 50%;
-}
-
-.java .contentbx2{
-	position: relative;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 1;
-
-}
-
-
-.java .contentbx2 h3{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.java .contentbx2 .learn{
-	position: relative;
-	top: 200px;
-	opacity: 0;
-	padding: 10px 30px;
-	margin-top: 15px;
-	color: #fff;
-	text-decoration: none;
-	background: #2196f3;
-	border-radius: 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: 0.5s;
-}
-
-.java:hover .contentbx2 .learn{
-	top: 15px;
-	opacity: 1;
-}
-
-
-
-
-.python{
-	position: relative;
-	width: 220px;
-	height: 250px;
-	margin-top: 100px;
-	margin-left: 40px;
-	padding-top: 15px;
-	background: #122936;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.python::before{
-	content: '';
-	position: absolute;
-	background: #799618;
-	top: -50%;
-	width: 100%;
-	height: 100%;
-	transform: skewY(345deg);
-	transition: 0.5s;
-}
-
-.python:hover::before{
-	top: -70%;
-	transform: skewY(390deg);
-}
-
-.imgbox3 img{
-	height: 100px;
-	width: 150px;
-	border-radius: 8px;
-}
-
-.python .imgbox3{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.python:hover .imgbox3 img{
-	max-width: 50%;
-}
-
-.python .contentbx3{
-	position: relative;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 1;
-
-}
-
-
-.python .contentbx3 h3{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.python .contentbx3 .learn{
-	position: relative;
-	top: 200px;
-	opacity: 0;
-	padding: 10px 30px;
-	margin-top: 15px;
-	color: #fff;
-	text-decoration: none;
-	background: #2196f3;
-	border-radius: 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: 0.5s;
-}
-
-.python:hover .contentbx3 .learn{
-	top: 15px;
-	opacity: 1;
-}
-
-
-.ruby{
-	position: relative;
-	width: 220px;
-	height: 250px;
-	margin-top: 100px;
-	margin-left: 40px;
-	padding-top: 15px;
-	background: #122936;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.ruby::before{
-	content: '';
-	position: absolute;
-	background: #1db35e;
-	top: -50%;
-	width: 100%;
-	height: 100%;
-	transform: skewY(345deg);
-	transition: 0.5s;
-}
-
-.ruby:hover::before{
-	top: -70%;
-	transform: skewY(390deg);
-}
-
-.imgbox4 img{
-	height: 100px;
-	width: 150px;
-	border-radius: 8px;
-}
-
-.ruby .imgbox4{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.ruby:hover .imgbox4 img{
-	max-width: 50%;
-}
-
-.ruby .contentbx4{
-	position: relative;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 1;
-
-}
-
-
-.ruby .contentbx4 h3{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.ruby .contentbx4 .learn{
-	position: relative;
-	top: 200px;
-	opacity: 0;
-	padding: 10px 30px;
-	margin-top: 15px;
-	color: #fff;
-	text-decoration: none;
-	background: #2196f3;
-	border-radius: 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: 0.5s;
-}
-
-.ruby:hover .contentbx4 .learn{
-	top: 15px;
-	opacity: 1;
-}
-
-.swift{
-	position: relative;
-	width: 220px;
-	height: 250px;
-	margin-top: 100px;
-	margin-left: 40px;
-	padding-top: 15px;
-	background: #122936;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.swift::before{
-	content: '';
-	position: absolute;
-	background: #a88627;
-	top: -50%;
-	width: 100%;
-	height: 100%;
-	transform: skewY(345deg);
-	transition: 0.5s;
-}
-
-.swift:hover::before{
-	top: -70%;
-	transform: skewY(390deg);
-}
-
-.imgbox5 img{
-	height: 100px;
-	width: 150px;
-	border-radius: 8px;
-}
-
-.swift .imgbox5{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.swift:hover .imgbox5 img{
-	max-width: 50%;
-}
-
-.swift .contentbx5{
-	position: relative;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 1;
-
-}
-
-
-.swift .contentbx5 h3{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.swift .contentbx5 .learn{
-	position: relative;
-	top: 200px;
-	opacity: 0;
-	padding: 10px 30px;
-	margin-top: 15px;
-	color: #fff;
-	text-decoration: none;
-	background: #2196f3;
-	border-radius: 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: 0.5s;
-}
-
-.swift:hover .contentbx5 .learn{
-	top: 15px;
-	opacity: 1;
-}
-
-
-
-.kotlin{
-	position: relative;
-	width: 220px;
-	height: 250px;
-	margin-top: 100px;
-	margin-left: 40px;
-	padding-top: 15px;
-	background: #122936;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.kotlin::before{
-	content: '';
-	position: absolute;
-	background: #1db39a;
-	top: -50%;
-	width: 100%;
-	height: 100%;
-	transform: skewY(345deg);
-	transition: 0.5s;
-}
-
-.kotlin:hover::before{
-	top: -70%;
-	transform: skewY(390deg);
-}
-
-.imgbox6 img{
-	height: 100px;
-	width: 150px;
-	border-radius: 8px;
-}
-
-.kotlin .imgbox6{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.kotlin:hover .imgbox6 img{
-	max-width: 50%;
-}
-
-.kotlin .contentbx6{
-	position: relative;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 1;
-
-}
-
-
-.kotlin .contentbx6 h3{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.kotlin .contentbx6 .learn{
-	position: relative;
-	top: 200px;
-	opacity: 0;
-	padding: 10px 30px;
-	margin-top: 15px;
-	color: #fff;
-	text-decoration: none;
-	background: #2196f3;
-	border-radius: 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: 0.5s;
-}
-
-.kotlin:hover .contentbx6 .learn{
-	top: 15px;
-	opacity: 1;
-}
-
-
-
-.dart{
-	position: relative;
-	width: 220px;
-	height: 250px;
-	margin-top: 100px;
-	margin-left: 40px;
-	padding-top: 15px;
-	background: #122936;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.dart::before{
-	content: '';
-	position: absolute;
-	background: #a82f31;
-	top: -50%;
-	width: 100%;
-	height: 100%;
-	transform: skewY(345deg);
-	transition: 0.5s;
-}
-
-.dart:hover::before{
-	top: -70%;
-	transform: skewY(390deg);
-}
-
-.imgbox7 img{
-	height: 100px;
-	width: 150px;
-	border-radius: 8px;
-}
-
-.dart .imgbox7{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-}
-
-.dart:hover .imgbox7 img{
-	max-width: 50%;
-}
-
-.dart .contentbx7{
-	position: relative;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	z-index: 1;
-
-}
-
-
-.dart .contentbx7 h3{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-}
-
-.dart .contentbx7 .learn{
-	position: relative;
-	top: 200px;
-	opacity: 0;
-	padding: 10px 30px;
-	margin-top: 15px;
-	color: #fff;
-	text-decoration: none;
-	background: #2196f3;
-	border-radius: 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	transition: 0.5s;
-}
-
-.dart:hover .contentbx7 .learn{
-	top: 15px;
-	opacity: 1;
+@media (max-width: 900px){
+	
 }
