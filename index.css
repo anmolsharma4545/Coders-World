@@ -102,7 +102,6 @@ nav ul li a:hover{
 }
 
 .dropbtn {
-    background-color: #04AA6D;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -716,7 +715,7 @@ input::placeholder{
          display: none;
      }
      .dropdown-content{
-         top: 0%;
+         top: 10%;
          left: 90%;
      }
      nav.active{
