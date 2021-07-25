@@ -1,7 +1,5 @@
 var preloader = document.querySelector('.loader');
-
-
 window.onload = () => {
-    preloader.style.display = 'none';
+    preloader.style.display = 'grid';
 }
 
